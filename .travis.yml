@@ -1,12 +1,16 @@
-sudo: required
+# sudo: required
 
 language: generic
+
+dist: xenial
+
+os: linux
 
 services:
   - docker
 
 before_install:
-  - echo "start Creating an image withe dockerfile"
+  - echo "start Creating an image with dockerfile"
   - docker build -t jaeha23/docker-react-app -f Dockerfile.dev .
 
 script:
